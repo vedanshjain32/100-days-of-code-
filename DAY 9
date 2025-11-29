@@ -1,0 +1,57 @@
+//Q17: Write a program to find the roots of a quadratic equation and categorize them.
+
+#include<stdio.h>
+#include<math.h>
+int main(){
+  int a,b,c,a1,a2,D;
+  printf("enter values of a,b and c for a quadratic equation: ax^2 +bx + c\n");
+  scanf("%d %d %d",&a,&b,&c);
+  D = b*b -4*a*c;
+  a1= (-b+pow(D,1/2))/2*a;
+  a2= (-b-pow(D,1/2))/2*a;
+  if(D==0){
+    printf("Roots are real and same: %d\n",a1);
+  }
+  else if(D<0){
+    printf("Roots are complex\n");
+  }
+  else{
+    printf("Roots are real and different: %d, %d\n",a1,a2);
+  }
+
+  return 0;
+
+}
+
+/*Q18: Write a program that accepts a percentage (0-100) and assigns a grade based on the following criteria: 
+90-100: Grade A 
+80-89: Grade B 
+70-79: Grade C 
+60-69: Grade D 
+below 60: Grade F.*/
+
+#include<stdio.h>
+int main(){
+    float percent;
+    printf("enter your percentage: \n");
+    scanf("%f",&percent);
+    if(percent>=90.0 && percent<=100.0){
+        printf("Grade A");
+    }
+    else if(percent>=80.0 && percent<=89.0){
+        printf("Grade B");
+    }
+    else if(percent>=70.0 && percent<=79.0){
+        printf("Grade C");
+    }
+    else if(percent>=60.0 && percent<=69.0){
+        printf("Grade D");
+    }
+    else{
+        printf("Grade F");
+    }
+        
+
+    return 0;
+      
+}
