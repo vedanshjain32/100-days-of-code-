@@ -1,0 +1,59 @@
+//Q21: Write a program to display the month name and number of days using switch-case for a given month number.
+
+#include<stdio.h>
+int main(){
+    int num;
+    printf("enter a number from 1 and 12: \n");
+    scanf("%d",&num);
+    switch(num){
+        case 1: printf("January, 31 days");
+                break;
+        case 2: printf("February, 28 days");
+                break;
+        case 3: printf("March, 31 days");
+                break;
+        case 4: printf("April, 30 days");
+                break;
+        case 5: printf("May, 31 days");
+                break;
+        case 6: printf("June, 30 days");
+                break;
+        case 7: printf("July, 31 days");
+                break;
+        case 8: printf("August, 31 days");
+                break;
+        case 9: printf("September, 30 days");
+                break;
+        case 10: printf("October, 31 days");
+                break;
+        case 11: printf("November, 30 days");
+                break;
+        case 12: printf("December, 31 days");
+                break;                                                                                     
+    }
+
+
+    return 0;
+      
+}
+//Q22: Write a program to find profit or loss percentage given cost price and selling price.
+
+#include<stdio.h>
+int main()
+{
+    float cp,sp,net,percentage;
+    printf("enter cost price and selling price for your goods: \n");
+    scanf("%f %f",&cp,&sp);
+    net = sp-cp;
+    percentage = net/cp*100;
+    if(percentage>0){
+        printf("profit %.2f%%",percentage);
+    }
+    else if(percentage<0){
+        percentage*(-1);
+        printf("loss %.2f%%",percentage);
+    }
+
+    return 0;
+      
+}
